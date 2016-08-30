@@ -1,13 +1,5 @@
 cmake_minimum_required (VERSION 2.6)
 
-# configure a header file to pass some of the CMake settings
-# to the source code
-configure_file (
-    "${CMAKE_CURRENT_SOURCE_DIR}/agocontrol-init-script.sh.in"
-    "${CMAKE_CURRENT_BINARY_DIR}/agocontrol-init-script.sh"
-    @ONLY
-)
-
 install (PROGRAMS myavahi.py agoctrl.sh DESTINATION ${BINDIR})
 install (DIRECTORY DESTINATION ${CONFDIR}/schema.d)
 install (DIRECTORY DESTINATION ${CONFDIR}/maps)

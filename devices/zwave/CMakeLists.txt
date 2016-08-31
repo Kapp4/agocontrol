@@ -13,6 +13,8 @@ ELSE (FREEBSD)
 	list(APPEND DEVICE_EXTRA_LIBRARIES udev)
 ENDIF (FREEBSD)
 
+list(APPEND DEVICE_EXTRA_LIBRARIES pthread)
+
 include_directories("/usr/include/openzwave")
 include_directories("/usr/include/openzwave/value_classes")
 include_directories("/usr/include/openzwave/platform")
